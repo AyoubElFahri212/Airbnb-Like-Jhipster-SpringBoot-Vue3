@@ -1,0 +1,5 @@
+org.springframework.test.context.ContextCustomizerFactory = \
+    ma.fullstackclone.airbnb.config.\
+    SqlTestContainersSpringContextCustomizerFactory,ma.fullstackclone.airbnb.\
+    config.TestContainersSpringContextCustomizerFactory,ma.fullstackclone.\
+    airbnb.config.KafkaTestContainersSpringContextCustomizerFactory
