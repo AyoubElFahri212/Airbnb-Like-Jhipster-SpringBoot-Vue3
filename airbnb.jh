@@ -1,0 +1,114 @@
+// Entités principales
+entity Property {
+  title String required maxlength(100),
+  description TextBlob required,
+  pricePerNight BigDecimal required min(0),
+  address String required maxlength(255),
+  latitude BigDecimal,
+  longitude BigDecimal,
+  numberOfRooms Integer required min(1),
+  numberOfBathrooms Integer min(1),
+  maxGuests Integer min(1),
+  propertySize Integer min(0),
+  availabilityStart ZonedDateTime,
+  availabilityEnd ZonedDateTime,
+  instantBook Boolean required,
+  minimumStay Integer min(1),
+  cancellationPolicy String required,
+  houseRules TextBlob,
+  isActive Boolean required
+}
+
+entity Country {
+  name String required unique,
+  code String required unique maxlength(2),
+  phoneCode String required maxlength(5)
+}
+
+entity City {
+  name String required,
+  postalCode String maxlength(10),
+  latitude BigDecimal required,
+  longitude BigDecimal required
+}
+
+entity Amenity {
+  name String required unique,
+  iconClass String maxlength(50)
+}
+
+entity PropertyCategory {
+  name String required unique,
+  description TextBlob
+}
+
+entity PropertyImage {
+  imageUrl String required,
+  isMain Boolean required,
+  caption String maxlength(100)
+}
+
+entity Booking {
+  checkInDate Instant required,
+  checkOutDate Instant required,
+  totalPrice BigDecimal required min(0),
+  bookingDate Instant required,
+  status BookingStatus required,
+  specialRequests TextBlob
+}
+
+entity Review {
+  rating Integer required min(1) max(5),
+  comment TextBlob,
+  reviewDate Instant required
+}
+
+entity Promotion {
+  code String required unique,
+  discountType DiscountType required,
+  discountValue BigDecimal required min(0),
+  validFrom Instant required,
+  validUntil Instant required,
+  maxUses Integer,
+  isActive Boolean required
+}
+
+// Enums
+enum BookingStatus {
+  PENDING, CONFIRMED, CANCELLED, COMPLETED
+}
+
+enum DiscountType {
+  PERCENTAGE, FIXED_AMOUNT
+}
+
+// Relations
+relationship ManyToOne {
+  Property{host} to User
+  Property{city} to City
+  City{country} to Country
+  Booking{guest} to User
+  Booking{property} to Property
+  Review{author} to User
+  Review{property} to Property
+  PropertyImage{property} to Property
+}
+
+relationship ManyToMany {
+  Property{amenities} to Amenity
+  Property{categories} to PropertyCategory
+}
+
+relationship OneToMany {
+  Property{bookings} to Booking{property}
+  Property{reviews} to Review{property}
+  Property{images} to PropertyImage{property}
+  Country{cities} to City{country}
+}
+
+// Options JHipster
+dto * with mapstruct
+service * with serviceImpl
+paginate all with pagination
+filter all
+
