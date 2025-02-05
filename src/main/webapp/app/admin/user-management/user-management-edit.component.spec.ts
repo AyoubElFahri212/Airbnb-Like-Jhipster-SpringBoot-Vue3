@@ -93,8 +93,8 @@ describe('UserManagementEdit Component', () => {
       // GIVEN
       axiosStub.put.resolves({
         headers: {
-          'x-airbnbapp-alert': '',
-          'x-airbnbapp-params': '',
+          'x-jhipsterapp-alert': '',
+          'x-jhipsterapp-params': '',
         },
       });
       axiosStub.get.withArgs(`api/admin/users/${123}`).resolves({
@@ -123,8 +123,8 @@ describe('UserManagementEdit Component', () => {
       // GIVEN
       axiosStub.post.resolves({
         headers: {
-          'x-airbnbapp-alert': '',
-          'x-airbnbapp-params': '',
+          'x-jhipsterapp-alert': '',
+          'x-jhipsterapp-params': '',
         },
       });
       axiosStub.get.resolves({});

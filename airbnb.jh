@@ -106,12 +106,7 @@ relationship ManyToMany {
   Property{categories} to PropertyCategory
 }
 
-relationship OneToMany {
-  Property{bookings} to Booking{property}
-  Property{reviews} to Review{property}
-  Property{images} to PropertyImage{property}
-  Country{cities} to City{country}
-}
+
 
 
 dto * with mapstruct

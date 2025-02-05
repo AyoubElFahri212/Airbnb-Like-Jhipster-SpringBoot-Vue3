@@ -53,7 +53,7 @@ public class MailService {
 
     @Async
     public void sendEmail(String to, String subject, String content, boolean isMultipart, boolean isHtml) {
-        sendEmailSync(to, subject, content, isMultipart, isHtml);
+        this.sendEmailSync(to, subject, content, isMultipart, isHtml);
     }
 
     private void sendEmailSync(String to, String subject, String content, boolean isMultipart, boolean isHtml) {
@@ -83,7 +83,7 @@ public class MailService {
 
     @Async
     public void sendEmailFromTemplate(User user, String templateName, String titleKey) {
-        sendEmailFromTemplateSync(user, templateName, titleKey);
+        this.sendEmailFromTemplateSync(user, templateName, titleKey);
     }
 
     private void sendEmailFromTemplateSync(User user, String templateName, String titleKey) {
@@ -97,24 +97,24 @@ public class MailService {
         context.setVariable(BASE_URL, jHipsterProperties.getMail().getBaseUrl());
         String content = templateEngine.process(templateName, context);
         String subject = messageSource.getMessage(titleKey, null, locale);
-        sendEmailSync(user.getEmail(), subject, content, false, true);
+        this.sendEmailSync(user.getEmail(), subject, content, false, true);
     }
 
     @Async
     public void sendActivationEmail(User user) {
         LOG.debug("Sending activation email to '{}'", user.getEmail());
-        sendEmailFromTemplateSync(user, "mail/activationEmail", "email.activation.title");
+        this.sendEmailFromTemplateSync(user, "mail/activationEmail", "email.activation.title");
     }
 
     @Async
     public void sendCreationEmail(User user) {
         LOG.debug("Sending creation email to '{}'", user.getEmail());
-        sendEmailFromTemplateSync(user, "mail/creationEmail", "email.activation.title");
+        this.sendEmailFromTemplateSync(user, "mail/creationEmail", "email.activation.title");
     }
 
     @Async
     public void sendPasswordResetMail(User user) {
         LOG.debug("Sending password reset email to '{}'", user.getEmail());
-        sendEmailFromTemplateSync(user, "mail/passwordResetEmail", "email.reset.title");
+        this.sendEmailFromTemplateSync(user, "mail/passwordResetEmail", "email.reset.title");
     }
 }

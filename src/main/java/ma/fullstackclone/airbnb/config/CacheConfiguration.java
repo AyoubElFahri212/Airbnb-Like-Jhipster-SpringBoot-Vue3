@@ -50,6 +50,19 @@ public class CacheConfiguration {
             createCache(cm, ma.fullstackclone.airbnb.domain.User.class.getName());
             createCache(cm, ma.fullstackclone.airbnb.domain.Authority.class.getName());
             createCache(cm, ma.fullstackclone.airbnb.domain.User.class.getName() + ".authorities");
+            createCache(cm, ma.fullstackclone.airbnb.domain.Property.class.getName());
+            createCache(cm, ma.fullstackclone.airbnb.domain.Property.class.getName() + ".amenities");
+            createCache(cm, ma.fullstackclone.airbnb.domain.Property.class.getName() + ".categories");
+            createCache(cm, ma.fullstackclone.airbnb.domain.Country.class.getName());
+            createCache(cm, ma.fullstackclone.airbnb.domain.City.class.getName());
+            createCache(cm, ma.fullstackclone.airbnb.domain.Amenity.class.getName());
+            createCache(cm, ma.fullstackclone.airbnb.domain.Amenity.class.getName() + ".properties");
+            createCache(cm, ma.fullstackclone.airbnb.domain.PropertyCategory.class.getName());
+            createCache(cm, ma.fullstackclone.airbnb.domain.PropertyCategory.class.getName() + ".properties");
+            createCache(cm, ma.fullstackclone.airbnb.domain.PropertyImage.class.getName());
+            createCache(cm, ma.fullstackclone.airbnb.domain.Booking.class.getName());
+            createCache(cm, ma.fullstackclone.airbnb.domain.Review.class.getName());
+            createCache(cm, ma.fullstackclone.airbnb.domain.Promotion.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

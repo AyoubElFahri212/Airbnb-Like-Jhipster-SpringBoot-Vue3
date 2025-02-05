@@ -28,7 +28,7 @@
 # - In Consul mode, the ports are in the consul.yml file.
 # - In Eureka mode, the ports are in the jhipster-registry.yml file.
 
-name: airbnb
+name: jhipster
 services:
   jhipster-control-center:
     image: 'jhipster/jhipster-control-center:v0.5.0'
@@ -43,7 +43,7 @@ services:
       - SPRING_SECURITY_USER_PASSWORD=admin
       # The token should have the same value than the one declared in you Spring configuration under the jhipster.security.authentication.jwt.base64-secret configuration's entry
       - JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET=OWMwZDU3MmViY2M2ODE0MmJmNjYwNDFkYjYyY2I5NjJjMTllMTdkMzY5MWEwODcyOTk0NDViY2E5Y2RkNzc5OTYxODAwYzk5ODJlOWY2OWM0MTI5ZDgxNGFkMzMwMWI0NTkwNDY3YWU2MWJhMGY1OTg5NmYyMDIyZTg3OWUyMzI=
-      - SPRING_CLOUD_DISCOVERY_CLIENT_SIMPLE_INSTANCES_AIRBNB_0_URI=http://host.docker.internal:8080
+      - SPRING_CLOUD_DISCOVERY_CLIENT_SIMPLE_INSTANCES_JHIPSTER_0_URI=http://host.docker.internal:8080
       - LOGGING_FILE_NAME=/tmp/jhipster-control-center.log
     # If you want to expose these ports outside your dev PC,
     # remove the "127.0.0.1:" prefix

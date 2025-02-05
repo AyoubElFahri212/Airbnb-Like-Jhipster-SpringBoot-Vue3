@@ -1,0 +1,28 @@
+{
+  "jhipsterApp": {
+    "propertyImage": {
+      "home": {
+        "title": "Property Images",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Property Image",
+        "createOrEditLabel": "Create or edit a Property Image",
+        "search": "Search for Property Image",
+        "notFound": "No Property Images found"
+      },
+      "created": "A new Property Image is created with identifier { param }",
+      "updated": "A Property Image is updated with identifier { param }",
+      "deleted": "A Property Image is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Property Image { id }?"
+      },
+      "detail": {
+        "title": "Property Image"
+      },
+      "id": "ID",
+      "imageUrl": "Image Url",
+      "isMain": "Is Main",
+      "caption": "Caption",
+      "property": "Property"
+    }
+  }
+}

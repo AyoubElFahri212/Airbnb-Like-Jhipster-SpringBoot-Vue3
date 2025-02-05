@@ -1,0 +1,31 @@
+{
+  "jhipsterApp": {
+    "promotion": {
+      "home": {
+        "title": "Promotions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Promotion",
+        "createOrEditLabel": "Create or edit a Promotion",
+        "search": "Search for Promotion",
+        "notFound": "No Promotions found"
+      },
+      "created": "A new Promotion is created with identifier { param }",
+      "updated": "A Promotion is updated with identifier { param }",
+      "deleted": "A Promotion is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Promotion { id }?"
+      },
+      "detail": {
+        "title": "Promotion"
+      },
+      "id": "ID",
+      "code": "Code",
+      "discountType": "Discount Type",
+      "discountValue": "Discount Value",
+      "validFrom": "Valid From",
+      "validUntil": "Valid Until",
+      "maxUses": "Max Uses",
+      "isActive": "Is Active"
+    }
+  }
+}

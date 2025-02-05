@@ -1,0 +1,45 @@
+{
+  "jhipsterApp": {
+    "property": {
+      "home": {
+        "title": "Properties",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Property",
+        "createOrEditLabel": "Create or edit a Property",
+        "search": "Search for Property",
+        "notFound": "No Properties found"
+      },
+      "created": "A new Property is created with identifier { param }",
+      "updated": "A Property is updated with identifier { param }",
+      "deleted": "A Property is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Property { id }?"
+      },
+      "detail": {
+        "title": "Property"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "pricePerNight": "Price Per Night",
+      "address": "Address",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "numberOfRooms": "Number Of Rooms",
+      "numberOfBathrooms": "Number Of Bathrooms",
+      "maxGuests": "Max Guests",
+      "propertySize": "Property Size",
+      "availabilityStart": "Availability Start",
+      "availabilityEnd": "Availability End",
+      "instantBook": "Instant Book",
+      "minimumStay": "Minimum Stay",
+      "cancellationPolicy": "Cancellation Policy",
+      "houseRules": "House Rules",
+      "isActive": "Is Active",
+      "host": "Host",
+      "city": "City",
+      "amenities": "Amenities",
+      "categories": "Categories"
+    }
+  }
+}

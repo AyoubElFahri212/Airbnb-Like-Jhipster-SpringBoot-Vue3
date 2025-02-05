@@ -15,7 +15,7 @@
 
 spring:
   application:
-    name: Airbnb
+    name: jhipster
   cloud:
     function:
       definition: kafkaConsumer;kafkaProducer
@@ -27,14 +27,14 @@ spring:
       bindings:
         binding-out-0:
           content-type: text/plain
-          group: airbnb
+          group: jhipster
         kafkaConsumer-in-0:
           destination: sse-topic
           content-type: text/plain
-          group: airbnb
+          group: jhipster
         kafkaProducer-out-0:
           content-type: text/plain
-          group: airbnb
+          group: jhipster
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
     contexts: test
@@ -55,13 +55,13 @@ spring:
           authorities-claim-name: auth
   task:
     execution:
-      thread-name-prefix: airbnb-task-
+      thread-name-prefix: jhipster-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: airbnb-scheduling-
+      thread-name-prefix: jhipster-scheduling-
       pool:
         size: 20
   thymeleaf:
@@ -78,9 +78,9 @@ server:
 # ===================================================================
 jhipster:
   clientApp:
-    name: 'airbnbApp'
+    name: 'jhipsterApp'
   mail:
-    from: Airbnb@localhost.com
+    from: jhipster@localhost.com
     base-url: http://127.0.0.1:8080
   logging:
     # To test json console appender

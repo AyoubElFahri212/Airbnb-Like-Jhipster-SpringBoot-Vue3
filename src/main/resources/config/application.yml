@@ -94,7 +94,7 @@ spring:
   autoconfigure:
     exclude: org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration
   application:
-    name: Airbnb
+    name: jhipster
   cloud:
     function:
       definition: kafkaConsumer;kafkaProducer
@@ -107,14 +107,14 @@ spring:
       bindings:
         binding-out-0:
           content-type: text/plain
-          group: airbnb
+          group: jhipster
         kafkaConsumer-in-0:
           destination: sse-topic
           content-type: text/plain
-          group: airbnb
+          group: jhipster
         kafkaProducer-out-0:
           content-type: text/plain
-          group: airbnb
+          group: jhipster
   docker:
     compose:
       enabled: true
@@ -174,13 +174,13 @@ spring:
           authorities-claim-name: auth
   task:
     execution:
-      thread-name-prefix: airbnb-task-
+      thread-name-prefix: jhipster-task-
       pool:
         core-size: 2
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: airbnb-scheduling-
+      thread-name-prefix: jhipster-scheduling-
       pool:
         size: 2
   thymeleaf:
@@ -211,7 +211,7 @@ info:
 
 jhipster:
   clientApp:
-    name: 'airbnbApp'
+    name: 'jhipsterApp'
   # By default CORS is disabled. Uncomment to enable.
   # cors:
   #   allowed-origins: "http://localhost:8100,http://localhost:9000"
@@ -221,12 +221,12 @@ jhipster:
   #   allow-credentials: true
   #   max-age: 1800
   mail:
-    from: Airbnb@localhost
+    from: jhipster@localhost
   api-docs:
     default-include-pattern: /api/**
     management-include-pattern: /management/**
-    title: Airbnb API
-    description: Airbnb API documentation
+    title: JHipster API
+    description: JHipster API documentation
     version: 0.0.1
     terms-of-service-url:
     contact-name:

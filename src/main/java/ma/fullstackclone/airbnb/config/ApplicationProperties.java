@@ -3,7 +3,7 @@ package ma.fullstackclone.airbnb.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * Properties specific to Airbnb.
+ * Properties specific to JHipster.
  * <p>
  * Properties are configured in the {@code application.yml} file.
  * See {@link tech.jhipster.config.JHipsterProperties} for a good example.
@@ -23,7 +23,7 @@ public class ApplicationProperties {
 
     public static class Liquibase {
 
-        private Boolean asyncStart = true;
+        private Boolean asyncStart;
 
         public Boolean getAsyncStart() {
             return asyncStart;

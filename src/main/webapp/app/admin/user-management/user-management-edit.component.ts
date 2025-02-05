@@ -115,8 +115,8 @@ export default defineComponent({
     },
 
     getToastMessageFromHeader(res: any): string {
-      return this.t$(res.headers['x-airbnbapp-alert'], {
-        param: decodeURIComponent(res.headers['x-airbnbapp-params'].replace(/\+/g, ' ')),
+      return this.t$(res.headers['x-jhipsterapp-alert'], {
+        param: decodeURIComponent(res.headers['x-jhipsterapp-params'].replace(/\+/g, ' ')),
       }).toString();
     },
   },

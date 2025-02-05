@@ -8,6 +8,6 @@ public class KafkaProducer implements Supplier<String> {
 
     @Override
     public String get() {
-        return "kafka_producer";
+        return "kakfa_producer";
     }
 }

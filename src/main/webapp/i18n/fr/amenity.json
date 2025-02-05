@@ -1,0 +1,27 @@
+{
+  "jhipsterApp": {
+    "amenity": {
+      "home": {
+        "title": "Amenities",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Amenity",
+        "createOrEditLabel": "Créer ou éditer un Amenity",
+        "search": "Recherche pour Amenity",
+        "notFound": "Aucun Amenity trouvé"
+      },
+      "created": "Un nouveau Amenity a été créé avec l'identifiant { param }",
+      "updated": "Le Amenity avec l'identifiant { param } a été mis à jour",
+      "deleted": "Le Amenity avec l'identifiant { param } a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Amenity { id } ?"
+      },
+      "detail": {
+        "title": "Amenity"
+      },
+      "id": "ID",
+      "name": "Name",
+      "iconClass": "Icon Class",
+      "property": "Property"
+    }
+  }
+}

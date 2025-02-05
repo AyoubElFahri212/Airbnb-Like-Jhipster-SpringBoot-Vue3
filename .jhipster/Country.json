@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20250205122734"
+  },
+  "applications": ["jhipster"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "maxlength"],
+      "fieldValidateRulesMaxlength": "2"
+    },
+    {
+      "fieldName": "phoneCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "5"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Country",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceImpl"
+}

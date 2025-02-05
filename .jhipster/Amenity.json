@@ -1,0 +1,25 @@
+{
+  "annotations": {
+    "changelogDate": "20250205122736"
+  },
+  "applications": ["jhipster"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "iconClass",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Amenity",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceImpl"
+}

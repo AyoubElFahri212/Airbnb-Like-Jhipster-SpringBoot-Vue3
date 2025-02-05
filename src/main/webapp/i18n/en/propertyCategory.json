@@ -1,0 +1,27 @@
+{
+  "jhipsterApp": {
+    "propertyCategory": {
+      "home": {
+        "title": "Property Categories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Property Category",
+        "createOrEditLabel": "Create or edit a Property Category",
+        "search": "Search for Property Category",
+        "notFound": "No Property Categories found"
+      },
+      "created": "A new Property Category is created with identifier { param }",
+      "updated": "A Property Category is updated with identifier { param }",
+      "deleted": "A Property Category is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Property Category { id }?"
+      },
+      "detail": {
+        "title": "Property Category"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "property": "Property"
+    }
+  }
+}

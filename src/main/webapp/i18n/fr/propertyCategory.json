@@ -1,0 +1,27 @@
+{
+  "jhipsterApp": {
+    "propertyCategory": {
+      "home": {
+        "title": "PropertyCategories",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Property Category",
+        "createOrEditLabel": "Créer ou éditer un Property Category",
+        "search": "Recherche pour Property Category",
+        "notFound": "Aucun Property Category trouvé"
+      },
+      "created": "Un nouveau Property Category a été créé avec l'identifiant { param }",
+      "updated": "Le Property Category avec l'identifiant { param } a été mis à jour",
+      "deleted": "Le Property Category avec l'identifiant { param } a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Property Category { id } ?"
+      },
+      "detail": {
+        "title": "Property Category"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "property": "Property"
+    }
+  }
+}

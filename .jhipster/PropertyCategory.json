@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20250205122737"
+  },
+  "applications": ["jhipster"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "TextBlob"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "PropertyCategory",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceImpl"
+}

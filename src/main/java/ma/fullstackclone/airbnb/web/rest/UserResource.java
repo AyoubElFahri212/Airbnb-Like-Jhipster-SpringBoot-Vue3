@@ -5,6 +5,7 @@ import jakarta.validation.constraints.Pattern;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
+import java.util.Collections;
 import ma.fullstackclone.airbnb.config.Constants;
 import ma.fullstackclone.airbnb.domain.User;
 import ma.fullstackclone.airbnb.repository.UserRepository;

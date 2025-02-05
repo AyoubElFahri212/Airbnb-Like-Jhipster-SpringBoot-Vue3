@@ -1,6 +1,7 @@
 package ma.fullstackclone.airbnb.web.rest;
 
 import java.util.*;
+import java.util.Collections;
 import java.util.stream.StreamSupport;
 import ma.fullstackclone.airbnb.repository.search.UserSearchRepository;
 import ma.fullstackclone.airbnb.service.UserService;

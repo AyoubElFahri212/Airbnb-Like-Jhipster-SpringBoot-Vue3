@@ -11,6 +11,7 @@ import org.springframework.test.context.ContextConfigurationAttributes;
 import org.springframework.test.context.ContextCustomizer;
 import org.springframework.test.context.ContextCustomizerFactory;
 import org.springframework.test.context.MergedContextConfiguration;
+import org.testcontainers.containers.KafkaContainer;
 
 public class KafkaTestContainersSpringContextCustomizerFactory implements ContextCustomizerFactory {
 
@@ -37,7 +38,7 @@ public class KafkaTestContainersSpringContextCustomizerFactory implements Contex
                         "spring.cloud.stream.kafka.binder.brokers=" +
                         kafkaBean.getKafkaContainer().getHost() +
                         ':' +
-                        kafkaBean.getKafkaContainer().getFirstMappedPort()
+                        kafkaBean.getKafkaContainer().getMappedPort(KafkaContainer.KAFKA_PORT)
                     );
                 }
                 testValues.applyTo(context);

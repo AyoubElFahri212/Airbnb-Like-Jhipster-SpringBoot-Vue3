@@ -1,14 +1,14 @@
 # This configuration is intended for development purpose, it's **your** responsibility to harden it for production
-name: airbnb
+name: jhipster
 services:
   app:
-    image: airbnb
+    image: jhipster
     environment:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,api-docs
       - MANAGEMENT_PROMETHEUS_METRICS_EXPORT_ENABLED=true
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/Airbnb
-      - SPRING_LIQUIBASE_URL=jdbc:postgresql://postgresql:5432/Airbnb
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/jhipster
+      - SPRING_LIQUIBASE_URL=jdbc:postgresql://postgresql:5432/jhipster
       - SPRING_ELASTICSEARCH_URIS=http://elasticsearch:9200
       - SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS=kafka:9092
     ports:
@@ -39,3 +39,7 @@ services:
     extends:
       file: ./kafka.yml
       service: kafka
+  zookeeper:
+    extends:
+      file: ./kafka.yml
+      service: zookeeper

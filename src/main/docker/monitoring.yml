@@ -1,8 +1,8 @@
 # This configuration is intended for development purpose, it's **your** responsibility to harden it for production
-name: airbnb
+name: jhipster
 services:
   prometheus:
-    image: prom/prometheus:v3.0.1
+    image: prom/prometheus:v2.55.0
     volumes:
       - ./prometheus/:/etc/prometheus/
     command:
@@ -15,7 +15,7 @@ services:
     # grafana/provisioning/datasources/datasource.yml
     network_mode: 'host' # to test locally running service
   grafana:
-    image: grafana/grafana:11.4.0
+    image: grafana/grafana:11.3.0
     volumes:
       - ./grafana/provisioning/:/etc/grafana/provisioning/
     environment:
