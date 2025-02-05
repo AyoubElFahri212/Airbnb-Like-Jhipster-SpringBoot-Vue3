@@ -1,4 +1,11 @@
-// Entités principales
+application {
+  config {
+  
+    authenticationType jwt,
+   
+  }
+  entities Property, Country, City, Amenity , PropertyCategory , PropertyImage, Booking,Review , Promotion
+}
 entity Property {
   title String required maxlength(100),
   description TextBlob required,
@@ -32,7 +39,7 @@ entity City {
   longitude BigDecimal required
 }
 
-entity Amenity {
+entity Amenity   {
   name String required unique,
   iconClass String maxlength(50)
 }
@@ -73,7 +80,7 @@ entity Promotion {
   isActive Boolean required
 }
 
-// Enums
+
 enum BookingStatus {
   PENDING, CONFIRMED, CANCELLED, COMPLETED
 }
@@ -82,14 +89,14 @@ enum DiscountType {
   PERCENTAGE, FIXED_AMOUNT
 }
 
-// Relations
+
 relationship ManyToOne {
-  Property{host} to User
+  Property{host} to User with builtInEntity
   Property{city} to City
   City{country} to Country
-  Booking{guest} to User
+  Booking{guest} to User with builtInEntity
   Booking{property} to Property
-  Review{author} to User
+  Review{author} to User with builtInEntity
   Review{property} to Property
   PropertyImage{property} to Property
 }
@@ -106,7 +113,7 @@ relationship OneToMany {
   Country{cities} to City{country}
 }
 
-// Options JHipster
+
 dto * with mapstruct
 service * with serviceImpl
 paginate all with pagination
